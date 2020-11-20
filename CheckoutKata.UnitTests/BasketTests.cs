@@ -30,7 +30,7 @@ namespace CheckoutKata.UnitTests
         public void Given_ItemsHaveBeenAddedToTheBasket_Then_TheTotalCostOfTheBasketShouldBeCalculated(string itemType, int expectedPrice)
         {
             //Arrange
-            Item item = itemType switch
+            IItem item = itemType switch
             {
                 "A" => new ItemA(),
                 "B" => new ItemB(),

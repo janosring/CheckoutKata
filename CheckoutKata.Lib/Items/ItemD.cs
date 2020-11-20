@@ -1,7 +1,7 @@
 ﻿namespace CheckoutKata.Lib.Items
 {
-    public class ItemD : Item
+    public class ItemD : IItem
     {
-        
+        public int CalculatePrice() => 55;
     }
 }

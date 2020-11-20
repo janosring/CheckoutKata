@@ -1,8 +1,7 @@
 ﻿namespace CheckoutKata.Lib.Items
 {
-    public class ItemC : IItem
+    public class ItemC : Item
     {
-        public int NumberOfItems { get; set; }
-        public int CalculatePrice() => NumberOfItems * 40;
+        public override int CalculatePrice() => NumberOfItems * 40;
     }
 }

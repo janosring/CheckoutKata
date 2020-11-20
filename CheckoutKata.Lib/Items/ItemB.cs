@@ -1,10 +1,8 @@
 ﻿namespace CheckoutKata.Lib.Items
 {
-    public class ItemB : IItem
+    public class ItemB : Item
     {
-        public int NumberOfItems { get; set; }
-
-        public int CalculatePrice()
+        public override int CalculatePrice()
         {
             var numberOfDiscounts = NumberOfItems / 3;
             var normalPriceItems = NumberOfItems % 3;

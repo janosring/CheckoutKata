@@ -1,8 +1,8 @@
 ﻿namespace CheckoutKata.Lib.Items
 {
-    public interface IItem
+    public abstract class Item
     {
         public int NumberOfItems { get; set; }
-        public int CalculatePrice();
+        public abstract int CalculatePrice();
     }
 }

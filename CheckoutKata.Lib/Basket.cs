@@ -6,14 +6,14 @@ namespace CheckoutKata.Lib
 {
     public class Basket
     {
-        private readonly ICollection<IItem> _items;
+        private readonly ICollection<Item> _items;
 
         public Basket()
         {
-            _items = new List<IItem>();
+            _items = new List<Item>();
         }
 
-        public void AddItem(IItem item)
+        public void AddItem(Item item)
         {
             var itemInTheBasket = _items.FirstOrDefault(x => x.GetType() == item.GetType());
             if (itemInTheBasket != null)
@@ -32,6 +32,6 @@ namespace CheckoutKata.Lib
             return _items.Sum(item => item.CalculatePrice());
         }
 
-        public ICollection<IItem> GetItems() => _items;
+        public ICollection<Item> GetItems() => _items;
     }
 }

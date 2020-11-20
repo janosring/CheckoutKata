@@ -45,7 +45,26 @@ namespace CheckoutKata.UnitTests
 
             //Assert
             Assert.AreEqual(expectedPrice, basket.CalculatePrice());
+        }
 
+        [DataTestMethod]
+        [DataRow(1, 15)]
+        [DataRow(2, 30)]
+        [DataRow(3, 40)]
+        [DataRow(4, 55)]
+        public void Given_IHaveAddedAMultipleOfThreeLotsOfItemBToTheBasket_Then_APromotionOfThreeForFortyShouldBeAppliedToEveryMultipleOfThree(int numberOfItemB, int expectedPrice)
+        {
+            //Arrange
+            var basket = new Basket();
+
+            //Act
+            for (int i = 0; i < numberOfItemB; i++)
+            {
+                basket.AddItem(new ItemB());
+            }
+
+            //Assert
+            Assert.AreEqual(expectedPrice, basket.CalculatePrice());
         }
     }
 }

@@ -15,6 +15,15 @@ namespace CheckoutKata.Lib
 
         public void AddItem(IItem item)
         {
+            var itemInTheBasket = _items.FirstOrDefault(x => x.GetType() == item.GetType());
+            if (itemInTheBasket != null)
+            {
+                itemInTheBasket.NumberOfItems++;
+                return;
+            }
+
+            item.NumberOfItems = 1;
+
             _items.Add(item);
         }
 

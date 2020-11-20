@@ -2,6 +2,7 @@
 {
     public class ItemA : IItem
     {
-        public int CalculatePrice() => 10;
+        public int NumberOfItems { get; set; }
+        public int CalculatePrice() => NumberOfItems * 10;
     }
 }

@@ -17,6 +17,11 @@ namespace CheckoutKata.Lib
             _items.Add(item);
         }
 
+        public int CalculatePrice()
+        {
+            return 0;
+        }
+
         public ICollection<Item> GetItems() => _items;
     }
 }

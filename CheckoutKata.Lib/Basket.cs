@@ -5,11 +5,18 @@ namespace CheckoutKata.Lib
 {
     public class Basket
     {
-        public void AddItem(Item item){}
+        private readonly ICollection<Item> _items;
 
-        public ICollection<Item> GetItems()
+        public Basket()
         {
-            return null;
+            _items = new List<Item>();
         }
+
+        public void AddItem(Item item)
+        {
+            _items.Add(item);
+        }
+
+        public ICollection<Item> GetItems() => _items;
     }
 }

@@ -1,3 +1,5 @@
+using CheckoutKata.Lib;
+using CheckoutKata.Lib.Items;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CheckoutKata.UnitTests
@@ -9,13 +11,14 @@ namespace CheckoutKata.UnitTests
         public void Given_IHaveSelectedToAddAnItemToTheBasket_Then_TheItemShouldBeAddedToTheBasket()
         {
             //Arrange
-            var item = new Item();
+            var item = new ItemA();
+            var basket = new Basket();
 
             //Act
-            basket.Add(new Item);
+            basket.AddItem(item);
 
             //Assert
-            Assert.AreEqual(1, basket.Items.Count);
+            Assert.AreEqual(1, basket.GetItems().Count);
         }
     }
 }

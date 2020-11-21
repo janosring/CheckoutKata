@@ -68,11 +68,11 @@ namespace CheckoutKata.UnitTests
         }
 
         [DataTestMethod]
-        [DataRow(1, 55)]
-        [DataRow(2, 82.5)]
-        [DataRow(3, 82.5 + 55)]
-        [DataRow(4, 82.5 + 82.5)]
-        public void Given_IHaveAddedAMultipleOfTwoLotsOfItemDToTheBasket_ThenAPromotionOf25OffShouldBeAppliedToEveryMultipleOfTwo(int numberOfItemsD, float expectedPrice)
+        [DataRow(1, 55d)]
+        [DataRow(2, 82.5d)]
+        [DataRow(3, 82.5d + 55d)]
+        [DataRow(4, 82.5d + 82.5d)]
+        public void Given_IHaveAddedAMultipleOfTwoLotsOfItemDToTheBasket_ThenAPromotionOf25OffShouldBeAppliedToEveryMultipleOfTwo(int numberOfItemsD, double expectedPrice)
         {
             //Arrange
             var basket = new Basket();

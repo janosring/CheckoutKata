@@ -2,6 +2,6 @@
 {
     public class ItemC : Item
     {
-        public override int CalculatePrice() => NumberOfItems * 40;
+        public override double CalculatePrice() => NumberOfItems * 40;
     }
 }

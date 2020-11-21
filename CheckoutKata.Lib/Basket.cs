@@ -27,7 +27,7 @@ namespace CheckoutKata.Lib
             _items.Add(item);
         }
 
-        public int CalculatePrice()
+        public double CalculatePrice()
         {
             return _items.Sum(item => item.CalculatePrice());
         }

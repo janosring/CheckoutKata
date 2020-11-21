@@ -3,6 +3,6 @@
     public abstract class Item
     {
         public int NumberOfItems { get; set; }
-        public abstract int CalculatePrice();
+        public abstract double CalculatePrice();
     }
 }

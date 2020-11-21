@@ -2,7 +2,7 @@
 {
     public class ItemB : Item
     {
-        public override int CalculatePrice()
+        public override double CalculatePrice()
         {
             var numberOfDiscounts = NumberOfItems / 3;
             var normalPriceItems = NumberOfItems % 3;

@@ -22,8 +22,6 @@ namespace CheckoutKata.Lib
                 return;
             }
 
-            item.NumberOfItems = 1;
-
             _items.Add(item);
         }
 
